@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'To Do App',
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-          color: Colors.blue.shade200 ,
+          color: Colors.blue.shade200,
           elevation: 0.0,
           titleTextStyle: const TextStyle(
             color: Colors.black54,
@@ -27,6 +27,10 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.grey.shade50,
       ),
       home: const HomePage(),
+      initialRoute: '/',
+      routes: {
+       // '/new_task': (context) => NewTaskPage(),
+      },
     );
   }
 }

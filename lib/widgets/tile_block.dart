@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_app_practice/models/task.dart';
 
-
 class TileBlock extends StatefulWidget {
   const TileBlock({
     super.key,
@@ -33,7 +32,15 @@ class _TileBlockState extends State<TileBlock> {
           icon: const Icon(Icons.delete_outline),
           color: Colors.redAccent.shade200,
         ),
-        title: Text(widget.toDoTask.taskName),
+        title: Row(
+          children: [
+            Text(widget.toDoTask.taskName),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.edit_outlined),
+            )
+          ],
+        ),
         leading: IconButton(
           icon: Icon(widget.toDoTask.isCompleted
               ? Icons.check_box_outlined
